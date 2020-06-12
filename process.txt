@@ -1,0 +1,6 @@
+How I made this program:
+
+Uses OpenGL for 3D and uses a dictionary (allcolors) to reference the colors on each face of every sub cube of the rubies cube. Buttons are made by draw the pixels of a pygame surface on top of the OpenGL surface using glDrawPixels. Making turns on cube is simply altering the dictionary allcolors using a formula referenced in the maketurn() method. buttons are created by the guibutton.py program and saved as images for use in the rubiks cube program in the "Working Buttons" folder.
+
+UPDATE:
+The current version (the updated version) uses a different method to make the GUI. It saves the pixels into a pygame surface using glReadPixels and pygame.image.fromstring(). It then blits the gui over it, and blits a watermark over it all (we don't do theft here). Then it uses glDrawPixels to draw the pygame surface containing the GL surface and the gui on it back to the GL surface. Everything else about this program was the same.
